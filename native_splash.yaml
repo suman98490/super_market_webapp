@@ -1,0 +1,12 @@
+flutter_native_splash:
+  android: true
+  web: true
+  ios: true
+  color: "#FFFFFF"
+  image: "assets/launcher.gif"
+  android_gravity: "center"
+
+  android_12:
+    color: "#FFFFFF"
+    image: "assets/launcher.gif"
+    android_gravity: "center"
