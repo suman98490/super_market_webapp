@@ -13,9 +13,9 @@ class _OnboardingState extends State<Onboarding> {
   final PageController controller = PageController();
   int currentPageIndex=0;
   var onBoardingItemsList = [
-    {"icon":"https://cdn-icons-gif.flaticon.com/18124/18124722.gif", "title":"Exclusive Discounts", "description": "Get the best deals on fresh groceries and daily discounts"},
-    {"icon":"https://cdn-icons-gif.flaticon.com/11933/11933522.gif", "title":"Fast \n Delivery", "description": "Get the best deals on fresh groceries and daily discounts"},
-    {"icon":"https://cdn-icons-gif.flaticon.com/18873/18873948.gif", "title":"Seamless Payments", "description": "Get the best deals on fresh groceries and daily discounts"}
+    {"icon":"https://cdn-icons-gif.flaticon.com/19020/19020213.gif", "title":"Exclusive Discounts", "description": "Get the best deals on fresh groceries and daily discounts"},
+    {"icon":"https://cdn-icons-gif.flaticon.com/18485/18485030.gif", "title":"Fast \n Delivery", "description": "Groceries delivered to your door step in minutes"},
+    {"icon":"https://cdn-icons-gif.flaticon.com/19008/19008359.gif", "title":"Seamless Payments", "description": "Pay Securely with UPI Cards or Wallets"}
   ];
   @override
   Widget build(BuildContext context) {
