@@ -47,6 +47,16 @@ class _OnboardingState extends State<Onboarding> {
                       Text("${onBoardingItemsList[index]["description"]}",
                         style: GoogleFonts.lato(fontSize: 20), textAlign: TextAlign.center),
                       SizedBox(height: 40.0),
+                      AnimatedSmoothIndicator(
+                        count: onBoardingItemsList.length,
+                        effect: SlideEffect(
+                            dotHeight: 12,
+                            dotWidth: 12,
+                            dotColor: Colors.grey,
+                            activeDotColor: Color(0xFF010131)
+                        ), activeIndex: index,
+                      ),
+                      SizedBox(height: 30.0),
                       ElevatedButton(onPressed: ()=>{
                         if(currentPageIndex < onBoardingItemsList.length -1){
                           controller.nextPage(duration: Duration(microseconds: 500), curve: Curves.easeInOut)
@@ -61,16 +71,8 @@ class _OnboardingState extends State<Onboarding> {
                           )
                         ),
                       ),
-                      SizedBox(height: 30.0),
-                      AnimatedSmoothIndicator(
-                        count: onBoardingItemsList.length,
-                        effect: SlideEffect(
-                            dotHeight: 12,
-                            dotWidth: 12,
-                            dotColor: Colors.grey,
-                          activeDotColor: Color(0xFF010131)
-                        ), activeIndex: index,
-                      )
+
+
                     ],
                   ),
                 );
