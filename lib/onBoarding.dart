@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'login.dart';
+
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
 
@@ -58,8 +60,23 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                       SizedBox(height: 30.0),
                       ElevatedButton(onPressed: ()=>{
-                        if(currentPageIndex < onBoardingItemsList.length -1){
+                        if(currentPageIndex < onBoardingItemsList.length-1){
                           controller.nextPage(duration: Duration(microseconds: 500), curve: Curves.easeInOut)
+                        }else if (currentPageIndex == onBoardingItemsList.length-1){
+                          showModalBottomSheet(
+
+                              context: context,
+                              builder: (context){
+                                return DraggableScrollableSheet(
+                                  initialChildSize: 1,
+                                    minChildSize: 0.1,
+                                    maxChildSize: 1,
+                                    builder: (context, scrollController){
+                                      return Login();
+                                    }
+                                );
+                              }
+                          )
                         }
                       },
                           child: Text("Next", style: GoogleFonts.lato(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),
@@ -71,7 +88,6 @@ class _OnboardingState extends State<Onboarding> {
                           )
                         ),
                       ),
-
 
                     ],
                   ),
