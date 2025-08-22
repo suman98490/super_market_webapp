@@ -64,7 +64,6 @@ class _OnboardingState extends State<Onboarding> {
                           controller.nextPage(duration: Duration(microseconds: 500), curve: Curves.easeInOut)
                         }else if (currentPageIndex == onBoardingItemsList.length-1){
                           showModalBottomSheet(
-
                               context: context,
                               builder: (context){
                                 return DraggableScrollableSheet(
